@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Modal from '../../ui/Modal';
 import Select from '../../ui/Select';
-import Input from '../../ui/Input';
 import { FiCheck } from 'react-icons/fi';
 import { useToast } from '../../../context/ToastContext';
 

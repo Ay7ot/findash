@@ -386,7 +386,7 @@ export default function Investments() {
                           layout="horizontal"
                           verticalAlign="bottom"
                           align="center"
-                          formatter={(value, entry, index) => {
+                          formatter={(value) => {
                             return (
                               <span className="text-xs font-medium">
                                 {value}

@@ -4,7 +4,6 @@ import {
   FiHome,
   FiTrendingUp,
   FiUser,
-  FiSettings,
   FiCreditCard,
   FiPieChart,
   FiChevronLeft,

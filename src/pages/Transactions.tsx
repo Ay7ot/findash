@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchAllTransactions } from '../utils/api';
-import { FiSearch, FiFilter, FiDownload } from 'react-icons/fi';
+import { FiSearch, FiDownload } from 'react-icons/fi';
 import Select from '../components/ui/Select';
 import Input from '../components/ui/Input';
 
@@ -69,26 +69,26 @@ export default function Transactions() {
     const exportTransactions = () => {
         // Define which transactions to export (either filtered or all)
         const dataToExport = filteredTransactions;
-        
+
         // Create CSV header
         const headers = ['Date', 'Description', 'Category', 'Amount'];
-        
+
         // Convert transactions to CSV rows
         const csvRows = dataToExport.map(transaction => {
             const date = new Date(transaction.date).toISOString().split('T')[0];
             const description = `"${transaction.description.replace(/"/g, '""')}"`;
             const category = `"${transaction.category}"`;
             const amount = transaction.amount.toString();
-            
+
             return [date, description, category, amount].join(',');
         });
-        
+
         // Combine header and rows
         const csvContent = [headers.join(','), ...csvRows].join('\n');
-        
+
         // Create a Blob with the CSV content
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-        
+
         // Create a download link and trigger the download
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
@@ -116,7 +116,7 @@ export default function Transactions() {
         <div className="p-4">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold">Transactions</h1>
-                <button 
+                <button
                     className="btn btn-primary flex items-center"
                     onClick={exportTransactions}
                 >

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
-import { FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
+import { FiMail, FiLock } from 'react-icons/fi';
 import { useAuth } from '../context/AuthContext';
 import Logo from '../components/Logo';
 import Input from '../components/ui/Input';
@@ -8,7 +8,7 @@ import Input from '../components/ui/Input';
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword] = useState(false);
     const [error, setError] = useState('');
     const { login, isAuthenticated, isLoading } = useAuth();
     const navigate = useNavigate();
@@ -43,7 +43,7 @@ export default function Login() {
     return (
         <div className="min-h-screen flex flex-col md:flex-row bg-gray-50 dark:bg-gray-900">
             {/* Left side - Image (visible on md and up) */}
-            <div className="hidden md:flex md:w-1/2 relative overflow-hidden flex flex-col justify-center items-center">
+            <div className="hidden md:flex md:w-1/2 relative overflow-hidden flex-col justify-center items-center">
                 {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 opacity-90"></div> */}
                 <img
                     src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"

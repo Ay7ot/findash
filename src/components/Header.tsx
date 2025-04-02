@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import { FiMenu, FiLogOut, FiUser, FiBell, FiSettings, FiHelpCircle, FiMoon, FiSun } from 'react-icons/fi';
+import { FiMenu, FiLogOut, FiUser, FiBell, FiSettings, FiHelpCircle } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import Logo from "./Logo";
 import { useAuth } from '../context/AuthContext';
-import { useTheme } from '../context/ThemeContext';
 
 type HeaderProps = {
   onMenuClick: () => void;
@@ -11,7 +10,6 @@ type HeaderProps = {
 
 export default function Header({ onMenuClick }: HeaderProps) {
   const { user, logout } = useAuth();
-  const { isDarkMode } = useTheme();
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
   const profileRef = useRef<HTMLDivElement>(null);
@@ -99,7 +97,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
               >
                 <FiBell className="h-6 w-6" />
                 {unreadCount > 0 && (
-                  <span className="absolute top-0 right-0 block h-4 w-4 rounded-full bg-red-500 text-white text-xs flex items-center justify-center transform translate-x-1 -translate-y-1">
+                  <span className="absolute top-0 right-0 h-4 w-4 rounded-full bg-red-500 text-white text-xs flex items-center justify-center transform translate-x-1 -translate-y-1">
                     {unreadCount}
                   </span>
                 )}

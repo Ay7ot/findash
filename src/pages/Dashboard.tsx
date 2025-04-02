@@ -12,7 +12,7 @@ import BalanceChart from '../components/dashboard/BalanceChart';
 import IncomeExpenseChart from '../components/dashboard/IncomeExpenseChart';
 import TransactionsList from '../components/dashboard/TransactionsList';
 import UpcomingBills from '../components/dashboard/UpcomingBills';
-import SavingsGoals from '../components/dashboard/SavingsGoals';
+// import SavingsGoals from '../components/dashboard/SavingsGoals';
 import QuickActions from '../components/dashboard/QuickActions';
 import { fetchDashboardData } from '../utils/api';
 
@@ -34,6 +34,7 @@ export default function Dashboard() {
   const [upcomingBills, setUpcomingBills] = useState<any[]>([]);
   const [data, setData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
+  console.log(data, isLoading);
 
   const [isLoadingBalance, setIsLoadingBalance] = useState(true);
   const [isLoadingIncomeExpense, setIsLoadingIncomeExpense] = useState(true);
@@ -198,7 +199,7 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column - Charts */}
         <div className="lg:col-span-2 space-y-6">
-          
+
           {/* Quick Actions */}
           <QuickActions />
 
