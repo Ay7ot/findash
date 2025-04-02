@@ -47,14 +47,14 @@ export default function Sidebar({ isMobileOpen, setIsMobileOpen }: { isMobileOpe
       {/* Mobile overlay */}
       {isMobileOpen && (
         <div
-          className="fixed inset-0 bg-gray-900 opacity-70 z-20 md:hidden"
+          className="fixed inset-0 bg-gray-50 dark:bg-gray-900 opacity-70 z-20 md:hidden"
           onClick={() => setIsMobileOpen(false)}
         ></div>
       )}
 
       {/* Sidebar */}
       <div
-        className={`fixed md:static inset-y-0 left-0 z-30 flex flex-col h-full w-64 bg-gray-800 text-white transition-all duration-300 ease-in-out
+        className={`fixed md:static inset-y-0 left-0 z-30 flex flex-col h-full w-64 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300 ease-in-out
           ${isMobileOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
           ${isCollapsed ? 'md:w-16' : 'md:w-64'}`}
       >
