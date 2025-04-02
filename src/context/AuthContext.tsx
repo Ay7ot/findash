@@ -43,6 +43,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     
     const newUser = {
       email,
+      password,
       name,
       avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`
     };

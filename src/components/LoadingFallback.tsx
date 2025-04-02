@@ -1,4 +1,3 @@
-import { FiDollarSign } from "react-icons/fi";
 import Logo from './Logo';
 
 export default function LoadingFallback() {
@@ -7,7 +6,7 @@ export default function LoadingFallback() {
       <div className="flex flex-col items-center space-y-6">
         <div className="relative">
           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg">
-            <Logo size="large" className="text-white" />
+            <Logo />
           </div>
           <div className="absolute inset-0 rounded-full border-4 border-t-blue-500 border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
         </div>

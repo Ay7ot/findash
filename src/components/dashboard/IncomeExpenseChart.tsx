@@ -34,7 +34,7 @@ const formatCurrency = (value: number) => {
   }).format(value);
 };
 
-export default function IncomeExpenseChart({ data, isLoading, timeRange }: IncomeExpenseChartProps) {
+export default function IncomeExpenseChart({ data, isLoading }: IncomeExpenseChartProps) {
   const { isDarkMode } = useTheme();
   
   if (isLoading) {

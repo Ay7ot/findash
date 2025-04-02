@@ -34,7 +34,7 @@ const formatCurrency = (value: number) => {
   }).format(value);
 };
 
-export default function BalanceChart({ data, isLoading, timeRange }: BalanceChartProps) {
+export default function BalanceChart({ data, isLoading }: BalanceChartProps) {
   const { isDarkMode } = useTheme();
   
   if (isLoading) {

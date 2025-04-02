@@ -81,7 +81,7 @@ export default function QuickActions() {
                 onClick={action.onClick}
               >
                 {/* Background decoration */}
-                <div className={`absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 rounded-full opacity-10 ${colors.bg}`}></div>
+                <div className={`absolute top-0 right-0 w-18 h-18 -mr-8 -mt-8 rounded-full opacity-10 ${colors.bg}`}></div>
 
                 {/* Icon */}
                 <div className={`${colors.bg} ${colors.hover} p-3 rounded-lg text-white mb-3 shadow-md ${colors.shadow} transition-all duration-300 z-10`}>
