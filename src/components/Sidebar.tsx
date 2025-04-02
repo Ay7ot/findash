@@ -88,8 +88,8 @@ export default function Sidebar({ isMobileOpen, setIsMobileOpen }: { isMobileOpe
                 `flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors
                 ${isCollapsed ? 'justify-center' : ''}
                 ${isActive
-                  ? 'bg-gray-900 text-white'
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                  ? 'bg-gray-900 dark:bg-gray-700 text-white '
+                  : 'text-gray-900 dark:text-white hover:bg-gray-700 hover:text-white'
                 }`
               }
               end={item.exact}
